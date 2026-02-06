@@ -1,0 +1,13 @@
+{
+  "countdown": {
+    "days": "{{count}}d",
+    "hours": "{{count}}h",
+    "minutes": "{{count}}m",
+    "seconds": "{{count}}s"
+  },
+  "gameEnded": {
+    "title": "انتهت اللعبة",
+    "description": "انتهت اللعبة. النتائج النهائية معروضة أدناه.",
+    "thankYou": "شكرا لك لحضورك!"
+  }
+}

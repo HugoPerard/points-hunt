@@ -1,0 +1,13 @@
+{
+  "countdown": {
+    "days": "{{count}}d",
+    "hours": "{{count}}h",
+    "minutes": "{{count}}m",
+    "seconds": "{{count}}s"
+  },
+  "gameEnded": {
+    "title": "Mchezo umekwisha",
+    "description": "Mchezo umekwisha. Matokeo ya mwisho yanaonyeshwa hapa chini.",
+    "thankYou": "Asante kwa kuwashuhudi!"
+  }
+}

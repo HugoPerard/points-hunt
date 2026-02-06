@@ -19,6 +19,8 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { TicketIcon } from '@/components/ui/ticket-icon';
 
 import { envClient } from '@/env/client';
+import { CountdownDisplay } from '@/features/dashboard/manager/countdown-display';
+import { GameEndedOverlay } from '@/features/dashboard/manager/game-ended-overlay';
 import { PodiumCard } from '@/features/dashboard/manager/podium-card';
 import {
   PageLayout,
@@ -28,7 +30,7 @@ import {
 } from '@/layout/manager/page-layout';
 
 export const PageDashboard = () => {
-  const { t } = useTranslation(['home']);
+  const { t } = useTranslation(['home', 'dashboard']);
   const leaderboardQuery = useQuery(
     orpc.user.getLeaderboard.queryOptions({
       input: { limit: 50 },
@@ -48,11 +50,13 @@ export const PageDashboard = () => {
   });
 
   return (
-    <PageLayout>
+    <PageLayout className="relative">
+      <GameEndedOverlay />
       <PageLayoutTopBar>
         <PageLayoutTopBarTitle>
           Leaderboard {envClient.VITE_EVENT_NAME}
         </PageLayoutTopBarTitle>
+        <CountdownDisplay />
       </PageLayoutTopBar>
       <PageLayoutContent containerClassName="max-w-6xl">
         <div className="flex flex-col gap-6">
